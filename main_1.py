@@ -28,11 +28,12 @@ class MyWidget(QMainWindow):
 
     def draw_flag(self, qp):
         # Задаем кисть
-        qp.setBrush(QColor(255, 255, 0))
+        qp.setPen(QColor(255, 255, 0))
         # Рисуем прямоугольник заданной кистью
         for _ in range(random.randrange(2, 10)):
-            qp.drawEllipse(random.randrange(100, 300), random.randrange(200, 300), random.randrange(10, 100),
-                           random.randrange(10, 100))
+            x = random.randrange(10, 200)
+            qp.drawEllipse(random.randrange(100, 300), random.randrange(200, 300), x,
+                           x)
 
 
 if __name__ == '__main__':
